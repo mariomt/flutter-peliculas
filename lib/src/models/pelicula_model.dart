@@ -13,6 +13,8 @@ class Peliculas {
 }
 
 class Pelicula {
+  String uniqueId;
+
   int voteCount;
   int id;
   bool video;
@@ -67,6 +69,14 @@ class Pelicula {
       return 'http://via.placeholder.com/350x150';
     } else {
       return 'https://image.tmdb.org/t/p/w500/$posterPath';
+    }
+  }
+
+  getBackgroudImg() {
+    if (posterPath == null) {
+      return 'http://via.placeholder.com/350x150';
+    } else {
+      return 'https://image.tmdb.org/t/p/w500/$backdropPath';
     }
   }
 }
